@@ -84,6 +84,8 @@ p{
 #ques input +label{
     font-family: Times;
     color:#DC143C;
+    font-style: italic;
+    margin-top: 1%;
 }
 
 #ques input[type=radio] {
