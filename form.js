@@ -18,10 +18,7 @@ var inter ="";
 var data,firstname,lastname,mailid,phone;
 function myfunc(res){
     data = res;
-    firstname = document.getElementById("fn").value;
-    lastname = document.getElementById("ln").value;
-    mailid = document.getElementById("mi").value;
-    phone = document.getElementById("pn").value;
+    
     document.getElementById("details").style.position="absolute";
     document.getElementById("details").style.left="-999999px";
     document.title = "Trivia Quiz";
@@ -94,6 +91,13 @@ function timer()
 
 function fetchurl()
 {  
+    firstname = document.getElementById("fn").value;
+    lastname = document.getElementById("ln").value;
+    mailid = document.getElementById("mi").value;
+    phone = document.getElementById("pn").value;
+    if(firstname ==="" | lastname===""|mailid===""|phone===""){ alert("Personal Details cannot be empty");return;}
+    if (!/^\d{10}$/.test(phone)) { alert("Phone Number should have 10 digits");return;}
+    if(!mailid.includes("@")|!mailid.includes(".")) { alert("Enter a valid mail id");return;}
     for (var i = 1; i <=4; i++) {
         if (document.getElementById("sel"+i.toString()).selected)
             category = document.getElementById("sel"+i.toString()).value;}
