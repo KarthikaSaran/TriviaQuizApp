@@ -1,0 +1,147 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 26, 2017, 11:28:16 AM
+    Author     : ADMIN
+*/
+body, html{
+    background-color:#4682B4;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5vw;
+    align-items: center;
+    margin:5%;
+    margin-top:50px;
+    justify-content: center;
+    width:100%;
+}
+
+.container{
+    width: 90%;
+    min-width: 500px;
+    margin: auto;
+}
+.card {
+    background:#FFA500;
+    background-image: url('bg1.jpg');
+    background-repeat:no-repeat;
+    background-position: left center;
+    border:1px solid #AAA;
+    border-bottom:3px solid #BBB;
+    padding:100px;
+    margin:5%;
+    font-size: 1.5vw;
+    justify-content: center;
+    vertical-align: middle;
+    width:60%;
+    height:50%;
+}
+
+.btn{    
+    background-color:tomato;
+    border-radius: 5px;
+    font-size: 1.25vw;
+    color:white;
+    border: none !important;
+    margin-bottom: 5%;
+    width:40%;
+    height:50px;
+    margin-top: 2%;
+}
+
+.btn:hover{    
+    color: white;
+    background-color:#008000;
+}
+
+p{
+    width:60%;
+    height:auto;
+    font-size: 1.25vw;
+}
+
+#details input,select{
+    margin-bottom: 1%;
+    width: 50%;
+    height: 40px;
+    border-radius: 0px;    
+}
+
+#ques input {
+    background-color:#FFD700;
+    padding:10px;
+    border:1px solid #ddd;
+    margin-bottom:1%;
+    margin-top:1%;
+    cursor:pointer;
+    font-family: cursive;
+    width:60%;
+    height:100px;
+}
+
+#ques input +label{
+    font-family: Times;
+    color:#DC143C;
+}
+
+#ques input[type=radio] {
+    margin-left: 1%;    
+    width:1.25em;
+    height:1.25em;
+    display: inline-block;
+}
+
+#ques1 {
+    border-radius: 25px;
+    background-color:#4682B4;
+    padding: 20px; 
+    width: 60%;
+    height: auto; 
+    font-family: cursive;
+    color:white;
+    font-size: 1.5vw;
+}
+
+#desc{
+    font-size: 1.5vw;
+    color:#00008B;
+}
+
+#counter{
+    color:#006400;
+    font-size: 2vw;
+    
+}
+
+.tab{
+    border: none;
+}
+
+#we{
+    width: 40%;
+    height: 20%; 
+    border-radius: 25px;
+}
+
+h2{
+    background-color:#4682B4;
+    padding: 20px; 
+    width: 80%;
+    height: 30px; 
+    border-radius: 25px;
+    color:white;
+    font-family: cursive;
+    font-size: 1.5vw;
+}
+h3{
+    text-decoration: underline;
+    margin-left:2%;
+    color:maroon
+}
+
+h4{
+    color:red;
+}
+
