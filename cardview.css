@@ -42,7 +42,7 @@ body, html{
     margin-bottom: 5%;
     width:40%;
     height:50px;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .btn:hover{    
@@ -57,7 +57,7 @@ p{
 }
 
 #details input,select{
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     width: 70%;
     height: 40px;
     border-radius: 0px;    
