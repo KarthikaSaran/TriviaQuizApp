@@ -10,7 +10,7 @@ and open the template in the editor.
 body, html{
     background-color:#4682B4;
     font-family:sans-serif;
-    font-size: 1.5vw;
+    font-size: 100%;
     align-items: center;
     margin:5%;
     margin-top:50px;
@@ -20,7 +20,6 @@ body, html{
 
 .container{
     width: 90%;
-    min-width: 500px;
     margin: auto;
 }
 .card {
@@ -31,10 +30,8 @@ body, html{
     border:1px solid #AAA;
     border-bottom:3px solid #BBB;
     padding:100px;
-    margin:5%;
-    font-size: 1.5vw;
+    font-size: 100%;
     justify-content: center;
-    vertical-align: middle;
     width:60%;
     height:50%;
 }
@@ -42,7 +39,7 @@ body, html{
 .btn{    
     background-color:tomato;
     border-radius: 5px;
-    font-size: 1.25vw;
+    font-size: 100%;
     color:white;
     border: none !important;
     margin-bottom: 5%;
@@ -59,7 +56,7 @@ body, html{
 p{
     width:60%;
     height:auto;
-    font-size: 1.25vw;
+    font-size: 100%;
 }
 
 #details input,select{
@@ -86,8 +83,9 @@ p{
     color:#DC143C;
     font-style: italic;
     margin-top: 1%;
-    font-size: 1.5vw;
+    font-size: 100%;
 }
+
 
 #ques input[type=radio] {
     margin-left: 1%;    
@@ -104,17 +102,20 @@ p{
     height: auto; 
     font-family: sans-serif;
     color:white;
-    font-size: 1.5vw;
+    font-size: 100%;
 }
 
+
+
 #desc{
-    font-size: 1.5vw;
+    font-size: 100%;
     color:#00008B;
 }
 
+
 #counter{
     color:#006400;
-    font-size: 2vw;
+    font-size: 100%;
     
 }
 
@@ -136,7 +137,7 @@ h2{
     border-radius: 25px;
     color:white;
     font-family: cursive;
-    font-size: 1.5vw;
+    font-size: 100%;
 }
 h3{
     text-decoration: underline;
@@ -147,4 +148,9 @@ h3{
 h4{
     color:red;
 }
+@media (min-width: 360px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time {font-size:1rem;} } 
+@media (min-width: 500px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time {font-size:1rem;} } 
+@media (min-width: 640px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time {font-size:1rem;} } 
+@media (min-width:960px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time  {font-size:1.2rem;} } 
+@media (min-width:1100px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time  {font-size:1.5rem;} }
 
