@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 26, 2017, 11:28:16 AM
+    Author     : ADMIN
+*/
+body, html{
+    background-color:#4682B4;
+   font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.5vw;
+    align-items: center;
+    margin:5%;
+     margin-top:50px;
+     
+}
+
+
+.card {
+    
+    background:#FFA500;
+    background-image: url('bg1.jpg');background-repeat:no-repeat;
+    background-position: left center;
+    border:1px solid #AAA;
+    border-bottom:3px solid #BBB;
+    padding:100px;
+    margin:5%;
+    overflow:hidden;
+    font-size: 18px;
+}
+
+.btn{    
+    height: 50px;
+    width: 200px;
+    background-color:tomato;
+    border-radius: 5px;
+    font-size: 18px;
+    color:white;
+    border: none !important;
+    margin-bottom: 5px;
+   
+
+ 
+    
+  
+}
+.btn:hover{    
+    color: white;
+    background-color:#008000;
+}
+
+
+#details input,select{
+    margin-bottom: 5px;
+    width: 60%;
+    height: 40px;
+    border-radius: 0px;
+    
+}
+
+
+#ques input {
+    
+ background-color:#FFD700;
+ padding:10px;
+ border:1px solid #ddd;
+ margin-bottom:10px;
+ margin-top:10px;
+ cursor:pointer;
+ font-family: cursive;
+ 
+}
+#ques input +label{
+    
+
+ font-family: Times;
+ color:#DC143C;
+}
+
+#ques input[type=radio] {
+margin-left: 10px;    
+width:1.25em;
+height:1.25em;
+}
+
+#ques1 {
+    
+ border-radius: 25px;
+ background-color:#4682B4;
+ padding: 20px; 
+    width: 80%;
+    height: 20%; 
+ font-family: cursive;
+ color:white;
+ font-size: 18px;
+}
+
+#desc{
+    font-size: 18px;
+    color:#00008B;
+}
+#counter{
+    
+    color:#006400;
+    margin-left: 300px;
+    font-size: 40px;
+     
+    
+    opacity: 0;
+    animation: blinking 1s linear infinite;
+}
+@keyframes blinking {
+  from,
+  49.9% {
+    opacity: 0;
+  }
+  50%,
+  to {
+    opacity: 1;
+  }
+}
+.tab{
+    border: none;
+}
+#we{
+   width: 40%;
+    height: 20%; 
+     border-radius: 25px;
+}
+h2{
+   background-color:#4682B4;
+ padding: 20px; 
+    width: 80%;
+    height: 20%; 
+     border-radius: 25px;
+     color:white;
+     font-family: cursive;
+     font-size: 20px;
+}
