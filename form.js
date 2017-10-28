@@ -9,8 +9,8 @@ let headers = new Headers();
 headers.append('Content-Type', 'application/json');
 headers.append('Accept', 'application/json');
 //headers.append('Access-Control-Allow-Origin', 'http://localhost:8383');
-var category='9';
-var level='easy';
+var category="";
+var level="";
 var ans ="";
 var score =0;
 var sec = 60;
@@ -103,7 +103,9 @@ function fetchurl()
             category = document.getElementById("sel"+i.toString()).value;}
     for (var i = 1; i <=3; i++) {         
         if (document.getElementById("l"+i.toString()).selected)
-               level = document.getElementById("l"+i.toString()).value;}          
+               level = document.getElementById("l"+i.toString()).value;}  
+    if(category===""){ alert("Choose the quiz category");return;}
+    if(level===""){ alert("Choose the quiz level ");return;}
     var url = 'https://opentdb.com/api.php?amount=20&category='+category+'&difficulty='+level+'&type=multiple';
  
     fetch(url).then(function(response) 
