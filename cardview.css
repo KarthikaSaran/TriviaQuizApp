@@ -25,7 +25,7 @@ body, html{
     background:#FFA500;
     background-image: url('bg1.jpg');
     background-repeat:no-repeat;
-    background-position: left center;
+    background-position: right center;
     border:1px solid #AAA;
     border-bottom:3px solid #BBB;
     padding:100px;
@@ -35,6 +35,7 @@ body, html{
     margin:auto;
     vertical-align: middle;
     min-height: 470px;
+    max-width: 700px;
     
 }
 
@@ -49,11 +50,20 @@ body, html{
     height:50px;
     margin-top: 5%;
     min-width: 150px;
+    box-shadow: 10px 10px  tomato;
+    background: -webkit-linear-gradient(-90deg, tomato, gold); 
+    background: -o-linear-gradient(-90deg, tomato, gold); 
+    background: -moz-linear-gradient(-90deg, tomato, gold); 
+    
 }
 
 .btn:hover{    
     color: white;
     background-color:#008000;
+    box-shadow: 10px 10px  #008000;
+    background: -webkit-linear-gradient(-90deg, #008000, gold); 
+    background: -o-linear-gradient(-90deg, #008000, gold); 
+    background: -moz-linear-gradient(-90deg, #008000, gold); 
 }
 
 p{
@@ -66,8 +76,12 @@ p{
     margin-bottom: 2%;
     width: 60%;
     height: 40px;
-    border-radius: 0px;   
+    border-radius: 5px;   
     min-width: 150px;
+    border:none;
+    background-color:#FFE4E1;
+    
+      
 }
 
 #ques input {
@@ -79,8 +93,7 @@ p{
     cursor:pointer;
     font-family: serif;
     width:60%;
-    height:100px;
-   
+    height:100px;  
 }
 
 #ques input +label{
@@ -89,6 +102,7 @@ p{
     font-style: italic;
     margin-top: 3%;
     font-size: 80%;
+    
    
 }
 
@@ -111,6 +125,7 @@ p{
     font-size: 100%;
     margin-bottom:5%;
      min-width: 150px;
+     
 }
 
 
@@ -118,7 +133,7 @@ p{
 #desc{
     font-size: 100%;
     color:#00008B;
-    margin-top:5%;
+    margin-top:7%;
 }
 
 
@@ -148,7 +163,11 @@ h2{
     font-family: Times;
     font-size: 100%;
     vertical-align:middle;
-    
+    box-shadow: 10px 10px  tomato;
+    background: -webkit-linear-gradient(-90deg, tomato, gold); 
+    background: -o-linear-gradient(-90deg, tomato, gold); 
+    background: -moz-linear-gradient(-90deg, tomato, gold); 
+  
     
 }
 h3{
@@ -158,6 +177,7 @@ h3{
 
 #time{
     font-size: 100%;
+  
 }
 h4{
     color:red;
