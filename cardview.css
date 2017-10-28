@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : ADMIN
 */
 body, html{
-    background-color:#4682B4;
+    background-color:navy;
     font-family:sans-serif;
     font-size: 100%;
     align-items: center;
@@ -22,12 +22,11 @@ body, html{
     margin: auto;
 }
 .card {
-    background:#FFA500;
-    background-image: url('bg1.jpg');
+    background:#FFE4E1;
+    border-radius: 100px;
     background-repeat:no-repeat;
     background-position: right center;
-    border:1px solid #AAA;
-    border-bottom:3px solid #BBB;
+    border:3px solid white;
     padding:100px;
     font-size: 100%;
     width:40%;
@@ -36,11 +35,13 @@ body, html{
     vertical-align: middle;
     min-height: 470px;
     max-width: 700px;
-    
+    background: -webkit-linear-gradient(-90deg, #2193b0, #6dd5ed); 
+    background: -o-linear-gradient(-90deg, #2193b0, #6dd5ed); 
+    background: -moz-linear-gradient(-90deg, #2193b0, #6dd5ed); 
 }
 
 .btn{    
-    background-color:tomato;
+    background-color:crimson;
     border-radius: 5px;
     font-size: 100%;
     color:white;
@@ -50,20 +51,16 @@ body, html{
     height:50px;
     margin-top: 5%;
     min-width: 150px;
-    box-shadow: 10px 10px  tomato;
-    background: -webkit-linear-gradient(-90deg, tomato, gold); 
-    background: -o-linear-gradient(-90deg, tomato, gold); 
-    background: -moz-linear-gradient(-90deg, tomato, gold); 
+    
+    box-shadow: 5px 5px  ivory;
     
 }
 
 .btn:hover{    
-    color: white;
-    background-color:#008000;
-    box-shadow: 10px 10px  #008000;
-    background: -webkit-linear-gradient(-90deg, #008000, gold); 
-    background: -o-linear-gradient(-90deg, #008000, gold); 
-    background: -moz-linear-gradient(-90deg, #008000, gold); 
+    color: navy;
+    background-color:#ADFF2F;
+    box-shadow: 5px 5px navy ;
+    
 }
 
 p{
@@ -79,7 +76,7 @@ p{
     border-radius: 5px;   
     min-width: 150px;
     border:none;
-    background-color:#FFE4E1;
+    background-color:ivory;
     
       
 }
@@ -98,10 +95,11 @@ p{
 
 #ques input +label{
     font-family: Times;
-    color:#DC143C;
+    color:maroon;
     font-style: italic;
-    margin-top: 3%;
+    margin-top: 4%;
     font-size: 80%;
+    font-weight: bold;
     
    
 }
@@ -116,7 +114,7 @@ p{
 
 #ques1 {
     border-radius: 25px;
-    background-color:#4682B4;
+    background-color:coral;
     padding: 20px; 
     width: 60%;
     height: auto; 
@@ -125,6 +123,7 @@ p{
     font-size: 100%;
     margin-bottom:5%;
      min-width: 150px;
+    box-shadow: 3px 3px  gold;
      
 }
 
@@ -151,10 +150,11 @@ p{
     width: auto;
     height: 30px; 
     border-radius: 5px;
+    text-decoration: underline;
 }
 
 h2{
-    background-color:#4682B4;
+    
     padding: 20px; 
     width: 80%;
     height: 30px; 
@@ -163,13 +163,10 @@ h2{
     font-family: Times;
     font-size: 100%;
     vertical-align:middle;
-    box-shadow: 10px 10px  tomato;
-    background: -webkit-linear-gradient(-90deg, tomato, gold); 
-    background: -o-linear-gradient(-90deg, tomato, gold); 
-    background: -moz-linear-gradient(-90deg, tomato, gold); 
-  
-    
+    text-transform:uppercase;   
 }
+
+
 h3{
     text-decoration: underline;
     color:maroon
