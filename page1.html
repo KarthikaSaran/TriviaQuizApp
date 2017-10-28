@@ -12,13 +12,15 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>    
+    <body>  
+        
+        <div class="container"> 
         <div class ="card" id="details" style="visibility: visible"> 
-             <h2 id="we">Welcome to Trivia Quiz</h2>
+            <h2 align="center" id="we">Trivia Quiz</h2>
             <p> Personal Details</p><hr>
-            <input id="fn" name="firstname" type="text" placeholder="First Name"><br>
+            <input id="fn" name="firstname" type="text" placeholder="First Name" required autofocus><br>
             <input id="ln" name="lastname" type="text" placeholder="Last Name"> <br>
-            <input id="mi" name="mailid" type="text" placeholder="Email id"> <br>
+            <input id="mi" name="mailid" type="email" placeholder="Email id"> <br>
             <input id="pn" name="mobile no" type="number" placeholder="Mobile Number"> <br>
             <p> Quiz Options </p><hr>
             <select id="sel" name="Category">
@@ -50,8 +52,10 @@ and open the template in the editor.
             <input id="o4" type="radio" name="group1" value="" > 
             <label id="lo4" for="o1"></label><br>
             <button class="btn" onclick="next()"> Next </button>
-            <p style='margin-left:70%;color:maroon;font-size:1.25vw;' id="time">Time Left: <span id ="counter"> 60 </span> seconds  </p>                
+            <p style='margin-left:60%;color:maroon;font-size:100%;' id="time">Time Left: <span id ="counter"> 60 </span> seconds  </p>                
         </div>
+        </div>
+           
         <link rel="stylesheet" href="cardview.css">
     </body>
 </html>
