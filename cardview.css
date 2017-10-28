@@ -16,6 +16,7 @@ body, html{
     margin:0;
 }
 
+
 .container{
     width: 100%;
     margin: auto;
@@ -29,7 +30,7 @@ body, html{
     border-bottom:3px solid #BBB;
     padding:100px;
     font-size: 100%;
-    width:60%;
+    width:40%;
     height:600px;
     margin:auto;
     vertical-align: middle;
@@ -43,7 +44,7 @@ body, html{
     color:white;
     border: none !important;
     margin-bottom: 5%;
-    width:40%;
+    width:auto;
     height:50px;
     margin-top: 5%;
 }
@@ -63,7 +64,8 @@ p{
     margin-bottom: 2%;
     width: 60%;
     height: 40px;
-    border-radius: 0px;    
+    border-radius: 0px;   
+    min-width: 150px;
 }
 
 #ques input {
@@ -126,8 +128,8 @@ p{
 }
 
 #we{
-    width: 40%;
-    height: 20%; 
+    width: auto;
+    height: 30px; 
     border-radius: 25px;
 }
 
