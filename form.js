@@ -66,7 +66,7 @@ function next()
         setQues(j);
     if(j===20){
         clearInterval(inter);
-         var msg = "<div style='align:left;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations <span style='color:blue'>"+firstname+" " +lastname+"!!!</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr></div>";
+         var msg = "<div style='align:left;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations!!! \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr></div>";
          document.getElementById("ques").innerHTML=msg;    
     }
 }
@@ -78,7 +78,7 @@ function timer()
     if (sec <= 0) 
     {
         clearInterval(inter);
-        var msg = "<div style='align:left;color:green;'> <h2 style='color:white'>Trivia Quiz Results </h2> Time Up !<hr><h4>Congratulations <span style='color:blue'>"+firstname+" " +lastname+"!!!</span></h4><hr><span style='color:#4B0082'> Your score is "+score+"/20</span><hr></div>";
+        var msg = "<div style='align:left;color:green;'> <h2 style='color:white'>Trivia Quiz Results </h2> Time Up !<hr><h4>Congratulations !!! \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082'> Your score is "+score+"/20</span><hr></div>";
         document.getElementById("ques").innerHTML=msg;
     }
     else
