@@ -23,7 +23,7 @@ body, html{
 }
 .card {
     background:#FFE4E1;
-    border-radius: 100px;
+    border-radius: 180px;
     background-repeat:no-repeat;
     background-position: right center;
     border:3px solid white;
@@ -163,7 +163,8 @@ h2{
     font-family: Times;
     font-size: 100%;
     vertical-align:middle;
-    text-transform:uppercase;   
+    text-transform:uppercase; 
+    text-decoration: underline;
 }
 
 
@@ -182,6 +183,12 @@ h4{
 span{
     font-size: 100%;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 @media (min-width: 360px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time,span {font-size:1rem;} } 
 @media (min-width: 500px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time,span {font-size:1rem;} } 
 @media (min-width: 640px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time,span {font-size:1.2rem;} } 
