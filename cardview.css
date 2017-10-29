@@ -23,7 +23,7 @@ body, html{
 }
 .card {
     background:#FFE4E1;
-    border-radius: 180px;
+    border-radius: 120px;
     background-repeat:no-repeat;
     background-position: right center;
     border:3px solid white;
@@ -52,14 +52,14 @@ body, html{
     margin-top: 5%;
     min-width: 150px;
     
-    box-shadow: 5px 5px  ivory;
+    box-shadow: 3px 3px  ivory;
     
 }
 
 .btn:hover{    
     color: navy;
     background-color:#ADFF2F;
-    box-shadow: 5px 5px navy ;
+    box-shadow: 3px 3px navy ;
     
 }
 
@@ -70,12 +70,12 @@ p{
 }
 
 #details input,select{
-    margin-bottom: 2%;
+   
     width: 60%;
     height: 40px;
     border-radius: 5px;   
     min-width: 150px;
-    border:none;
+    border:1px solid navy;
     background-color:ivory;
     
       
@@ -99,10 +99,9 @@ p{
     font-style: italic;
     margin-top: 4%;
     font-size: 80%;
-    font-weight: bold;
-    
-   
+    font-weight: bold;  
 }
+
 
 
 #ques input[type=radio] {
@@ -123,11 +122,14 @@ p{
     font-size: 100%;
     margin-bottom:5%;
      min-width: 150px;
-    box-shadow: 3px 3px  gold;
-     
+    box-shadow: 3px 3px  navy;
+    
 }
 
-
+#ques1:hover{
+   background-color:navy; 
+   box-shadow: 3px 3px  ivory;
+}
 
 #desc{
     font-size: 100%;
@@ -188,6 +190,26 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+#qm{
+    height:10%;
+    width:30%;
+     animation:move 3s infinite ease-in-out;
+ }
+
+@keyframes move{
+0%{
+ transform: scale(o.75) rotate(0deg);
+}
+  100%{
+   transform: scale(1.25) rotate(0.1deg);
+
+  }
+
+}
+
+
+
 
 @media (min-width: 360px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time,span {font-size:1rem;} } 
 @media (min-width: 500px) { media,ques1, ques input +label,card,body,counter,h2,btn,p,time,span {font-size:1rem;} } 
