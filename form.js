@@ -68,15 +68,14 @@ function next()
     }
     j=j+1;
     if(j<20)
-    {
         setQues(j);
-        if(j===20)
-        {
-            clearInterval(inter);
-            var msg = "<div style='align:center;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
-            document.getElementById("ques").innerHTML=msg;    
-        }
+    if(j===20)
+    {
+        clearInterval(inter);
+        var msg = "<div style='align:center;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
+        document.getElementById("ques").innerHTML=msg;    
     }
+    
 }
 
 function timer()
