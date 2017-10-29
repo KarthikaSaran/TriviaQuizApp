@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>   
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script language="javascript" type="text/javascript" src="form.js"></script>
+        <title>Personal Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>  
+        <div class="container"> 
+        <div class ="card" id="details" style="visibility: visible"> 
+            <h2 align="center" id="we">Trivia Quiz</h2>
+            <p> Personal Details</p><hr>
+            <input id="fn" name="firstname" type="text" placeholder="First Name" required autofocus><br>
+            <input id="ln" name="lastname" type="text" placeholder="Last Name"> <br>
+            <input id="mi" name="mailid" type="email" placeholder="Email id"> <br>
+            <input id="pn" name="mobile no" type="number" placeholder="Mobile Number"> <br>
+            <p> Quiz Options </p><hr>
+            <select id="sel" name="Category">
+                <option>Choose a category</option>
+                <option id="sel1" value="9">General Knowledge</option>
+                <option id="sel2" value="21">Sports</option>
+                <option id="sel3" value="17">Science & Nature</option>
+                <option id="sel4" value="18">Computers</option>
+            </select> 
+            <select id="level" name="Difficulty">
+                <option>Choose a level</option>
+                <option id="l1" value="easy">Easy</option>
+                <option id="l2" value="medium">Medium</option>
+                <option id="l3" value="hard">Hard</option>   
+            </select> 
+            <hr>
+            <button class="btn" onclick="fetchurl()">Start Quiz</button>    
+        </div>
+        <div class="card" id="ques" style="visibility: hidden"> 
+            <div style="margin-left:80%"><img src="qt.png" width="100" height="60"></div>
+            <div><img id="qm" src="qm.png" width="100" height="50"></div>
+            <h3>Question <span id="num"> </span></h3>
+            <p class="ani" id="ques1"> </p>
+            <input id="o1" type="radio" name="group1" value="" > 
+            <label id="lo1" for="o1"></label><br>
+            <input id="o2" type="radio" name="group1" value="" > 
+            <label id="lo2" for="o1"></label><br>
+            <input id="o3" type="radio" name="group1" value="" >
+            <label id="lo3" for="o1"></label><br>
+            <input id="o4" type="radio" name="group1" value="" > 
+            <label id="lo4" for="o1"></label><br>
+            <button class="btn" onclick="next()"> Next </button>
+            <p style='margin-left:60%;color:maroon;font-size:100%;' id="time">Time Left: <span id ="counter"> 60 </span> seconds  </p>                
+            </div>
+        </div>
+           
+        <link rel="stylesheet" href="cardview.css">
+    </body>
+</html>
