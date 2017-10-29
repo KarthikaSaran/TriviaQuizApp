@@ -8,7 +8,6 @@ var j=0;
 let headers = new Headers();
 headers.append('Content-Type', 'application/json');
 headers.append('Accept', 'application/json');
-//headers.append('Access-Control-Allow-Origin', 'http://localhost:8383');
 var category="";
 var level="";
 var ans ="";
@@ -16,18 +15,20 @@ var score =0;
 var sec = 60;
 var inter ="";
 var data,firstname,lastname,mailid,phone;
-function myfunc(res){
+
+function myfunc(res)
+{
     data = res;
-    
     document.getElementById("details").style.position="absolute";
     document.getElementById("details").style.left="-999999px";
     document.title = "Trivia Quiz";
     document.getElementById("ques").style.visibility="visible";
     setQues(j);
     timer();
-    }
+}
     
-function shuffleArray(array) {
+function shuffleArray(array) 
+{
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -35,7 +36,8 @@ function shuffleArray(array) {
     return array;
 }
 
-function setQues(j){
+function setQues(j)
+{
     document.getElementById("num").innerHTML = (j+1).toString();
     var res = data[j];
     var correct = res["correct_answer"];
@@ -44,33 +46,36 @@ function setQues(j){
     var options = incorrect.concat(correct);
     options = shuffleArray(options);
     document.getElementById("ques1").innerHTML =res["question"];
-    for(i=1;i<=4;i++){
+    for(i=1;i<=4;i++)
+    {
     document.getElementById("o"+i.toString()).value =options[i-1];
     document.getElementById("o"+i.toString()).innerHTML =options[i-1];
     document.getElementById("lo"+i.toString()).innerHTML =options[i-1];
     document.getElementById("o"+i.toString()).checked =false;
- } 
+    } 
 }
 
 function next()
-{  
-    for (var i = 1; i <=4; i++) {
-              if (document.getElementById("o"+i.toString()).checked){
-                  val = document.getElementById("o"+i.toString()).value;
-                 if(val===ans)
-                     score = score+1;
-              }
+{   
+    for (var i = 1; i <=4; i++) 
+    {
+        if (document.getElementById("o"+i.toString()).checked)
+          {
+            val = document.getElementById("o"+i.toString()).value;
+           if(val===ans)
+               score = score+1;
           }
+    }
     j=j+1;
     if(j<20)
+    {
         setQues(j);
-    if(j===20){
-        clearInterval(inter);
-         var msg = "<div style='align:left;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
-        
-         
-        document.getElementById("ques").innerHTML=msg; 
-        
+        if(j===20)
+        {
+            clearInterval(inter);
+            var msg = "<div style='align:center;color:green;'><h2 style='color:white;'> Trivia Quiz Results </h2><h4>Congratulations \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082;'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
+            document.getElementById("ques").innerHTML=msg;    
+        }
     }
 }
 
@@ -82,18 +87,13 @@ function timer()
     {
         clearInterval(inter);
         var msg = "<div style='align:left;color:green;'> <h2 style='color:white'>Trivia Quiz Results </h2> Time Up !<hr><h4>Congratulations !!! \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
-        
-        
-            document.getElementById("ques").innerHTML=msg;
-            
+        document.getElementById("ques").innerHTML=msg;       
     }
     else
         document.getElementById("counter").innerHTML = sec;
 
     }, 1000);
 }
-
-
 
 function fetchurl()
 {  
@@ -112,19 +112,15 @@ function fetchurl()
                level = document.getElementById("l"+i.toString()).value;}  
     if(category===""){ alert("Choose the quiz category");return;}
     if(level===""){ alert("Choose the quiz level ");return;}
-    
- 
     var url = 'https://opentdb.com/api.php?amount=20&category='+category+'&difficulty='+level+'&type=multiple';
     try{
-    fetch(url).then(function(response) 
-    {
-    var resp =  response.json();
-    var res;
-    resp.then(function(data){ res = data["results"]; myfunc(res);});
+        fetch(url).then(function(response) 
+        {
+        var resp =  response.json();
+        var res;
+        resp.then(function(data){ res = data["results"]; myfunc(res);});
    
-    }).catch(function(err) {
-    console.log(err);
-    });
-}catch(error){console.log(error);}
+        }).catch(function(err) {console.log(err);});
+        }catch(error){console.log(error);}
 }
 
