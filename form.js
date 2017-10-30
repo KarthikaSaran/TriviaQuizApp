@@ -24,7 +24,7 @@ function myfunc(res)
     document.title = "Trivia Quiz";
     document.getElementById("ques").style.visibility="visible";
     setQues(j);
-    timer();
+    
 }
     
 function shuffleArray(array) 
@@ -38,6 +38,9 @@ function shuffleArray(array)
 
 function setQues(j)
 {
+    clearInterval(inter);
+    sec=60;
+    timer();
     document.getElementById("num").innerHTML = (j+1).toString();
     var res = data[j];
     var correct = res["correct_answer"];
@@ -82,11 +85,11 @@ function timer()
 {
     inter = setInterval(function() {
     sec = sec- 1;
+    console.log(sec);
     if (sec <= 0) 
     {
         clearInterval(inter);
-        var msg = "<div style='align:left;color:green;'> <h2 style='color:white'>Trivia Quiz Results </h2> Time Up !<hr><h4>Congratulations !!! \n <span style='color:blue'>"+firstname+" " +lastname+"</span></h4><hr><span style='color:#4B0082'> Your score is "+score+"/20</span><hr>Thank You for taking the quiz<hr><img src='ty.gif' width=200 height=200/></div>";
-        document.getElementById("ques").innerHTML=msg;       
+        next();       
     }
     else
         document.getElementById("counter").innerHTML = sec;
