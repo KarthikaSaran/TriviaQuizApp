@@ -65,6 +65,7 @@ function next()
         if (document.getElementById("o"+i.toString()).checked)
           {
             val = document.getElementById("o"+i.toString()).value;
+            
            if(val===ans)
                score = score+1;
           }
@@ -83,9 +84,10 @@ function next()
 
 function timer()
 {
+    document.getElementById("counter").innerHTML = sec;
     inter = setInterval(function() {
+   
     sec = sec- 1;
-    console.log(sec);
     if (sec <= 0) 
     {
         clearInterval(inter);
